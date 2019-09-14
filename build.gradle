@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'SellSigns'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'ISO-8859-1'
+}
+
+task fatJar(type: Jar) {
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    with jar
+}
+
+
+repositories {
+    mavenCentral()
+
+    flatDir {
+        dirs 'C:\\Users\\Jordan\\iCloudDrive\\Documents\\work\\Libs'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
+
+    implementation name: 'spigot'
+    implementation name: 'Vault-1.6.7'
+    implementation name: 'ShopGUIPlus-1.19.1'
+}

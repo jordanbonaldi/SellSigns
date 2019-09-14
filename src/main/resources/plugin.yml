@@ -1,0 +1,4 @@
+name: SellSigns
+version: 1.0
+main: net.neferett.sellsigns.SellSigns
+depend: [ShopGUIPlus, Vault]

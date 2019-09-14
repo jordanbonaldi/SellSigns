@@ -1,0 +1,18 @@
+shop:
+  denominations:
+    - sellsigns
+    - sellsign
+    - sellchest
+    - sellchests
+  use_shopguiplus_itemamount: true # If false we auto calculate the amount for X items on player's hand
+  drop_out_not_sellable_items: true
+messages:
+  cantsell: "&cYou can't sell this item"
+  notenoughitems: "&cYou don't have the required amount of items"
+  cantopen: "&cYou can't open a sell signed chest from an other player"
+  notenoughmoney: "&cYou don't have enough money"
+  paiditem: "&aItem bought for"
+  inventoryfull: "&bYour inventory was full, the item has has drop on your feet"
+  price: "&ePrice:"
+  amount: "&eAmount:"
+  buy: "&aLeft to buy"
